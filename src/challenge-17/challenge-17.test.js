@@ -21,12 +21,29 @@ describe('[challenge-17] - The madness of sending package during this time of ye
     const numberOfPackages = countPackages(carrier1, 'dapelu');
     expect(numberOfPackages).toBe(9);
   });
+
   test('carrier 2 dapelu packages', () => {
     const numberOfPackages = countPackages(carrier2, 'camila');
     expect(numberOfPackages).toBe(15);
   });
+
+  test('carrier 2 lolivier packages', () => {
+    const numberOfPackages = countPackages(carrier2, 'lolivier');
+    expect(numberOfPackages).toBe(27);
+  });
+
+  test('carrier 2 faviola packages', () => {
+    const numberOfPackages = countPackages(carrier2, 'faviola');
+    expect(numberOfPackages).toBe(1);
+  });
+
   test("carrier doesn't exists", () => {
     const numberOfPackages = countPackages(null, 'test');
+    expect(numberOfPackages).toBe(0);
+  });
+
+  test("person doesn't belongs to the carrier", () => {
+    const numberOfPackages = countPackages(carrier1, 'lolivier');
     expect(numberOfPackages).toBe(0);
   });
 });

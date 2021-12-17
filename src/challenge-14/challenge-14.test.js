@@ -9,7 +9,7 @@ describe('[challenge-14] - In search of the lost reindeer', () => {
     const lost = missingReindeer([5, 6, 1, 2, 3, 7, 0]);
     expect(lost).toBe(4);
   });
-  test ('', () => {
+  test ('[0, 1]', () => {
     const lost = missingReindeer([0, 1]);
     expect(lost).toBe(2);
   })
